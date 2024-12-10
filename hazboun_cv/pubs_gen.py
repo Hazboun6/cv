@@ -32,6 +32,7 @@ aastexbib = {r'\baas':r'{Bulletin of American Astronomical Society}',
              r'\prl':r'{Physical Review Letters}',
              r'\apjl':r'{The Astrophysical Journal Letters}',
              r'\apj':r'{The Astrophysical Journal}',
+             r'\aap':r'{Astronomy and Astrophysics}',
              r'\cqg':r'{Classical and Quantum Gravity}',
              r'\npb':r'{Nuclear Physics B}',
              r'\aapr':r'{The Astronomy and Astrophysics Review}',
@@ -99,7 +100,7 @@ def get_bibitems(bibs):
                 authors = r"""{0}, [...], \textbf{{J.~S.~{{Hazboun}}}}, et al. [{1} Authors]""".format(author_list[0],L)
         elif L<=5:
             authors = ', '.join(author_list)
-            authors= authors.replace('J.~S.~{Hazboun}','\\textbf{J.~S.~Hazboun}')
+            authors = authors.replace('J.~S.~{Hazboun}','\\textbf{J.~S.~Hazboun}')
 
         jname = aastexbib[ent['journal']] if args.longjour else ent['journal']
         if 'Arxiv' in jname:

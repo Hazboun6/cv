@@ -1,0 +1,597 @@
+\documentclass[11pt,letterpaper,sans,unicode]{moderncv}
+\usepackage{xpatch}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{textcomp}
+\usepackage{units}
+\usepackage{lineno}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage[gen]{eurosym}
+\usepackage{comment}
+\usepackage{etaremune}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+%\usepackage[latin9]{inputenc}
+
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.7in,bottom=0.7in,left=1in,right=1in,bindingoffset=0cm]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\usepackage{lastpage}
+\usepackage{mathabx}
+\cfoot{{\color{gray} Page \thepage\ of \pageref{LastPage}}}
+
+\def\baas{{Bulletin of AAS}}               % Bulletin of the AAS
+\def\prd{{Phys. Rev.} D}
+\def\prl{{Phys.Rev.} Lett}
+\def\ajp{{Amer. J. Phys}}
+\def\apjl{{Astrophys. J.} Lett}
+\def\apjs{{Astrophys. J.} Supp}
+\def\apj{{Astrophys. J.}}
+\def\cqg{{Class. Quantum Grav.}}
+\def\aaps{{A\&AS}}
+\def\pasj{{PASJ}}
+\def\mnras{{MNRAS}}
+\def\aapr{{A\&ARv}}
+\def\aap{{A\&A}}
+\def\grg{{Gen. Rel.\&Grav.}}
+\def\na{{New Astronomy}}
+\def\ptp{{Progress of Theoretical Physics}}
+\def\araa{{ARA\&A}}
+\def\ssr{{Space Sci. Rev.}}
+\def\jpcs{{J. Phys. Conf. Ser.}}
+\def\npb{{Nucl. Phys. B}}
+\def\clrpaawp{{Can. Lon. Ran. Plan A\&A}}
+
+
+\newcommand{\cvreference}[9]{%
+  \textbf{#1}\newline% Name
+  \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+  \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+  \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+  \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+  \ifthenelse{\equal{#6}{}}{}{#6\newline}%
+  \ifthenelse{\equal{#7}{}}{}{#7\newline}%
+  \ifthenelse{\equal{#8}{}}{}{\emailsymbol~{\footnotesize \texttt{\emaillink[]{#8}}}\newline}
+  \ifthenelse{\equal{#9}{}}{}{\phonesymbol~#9}
+  }
+
+
+%%%%%% My Macros %%%%%
+\newcommand{\editem}[7]{\cventry{#1}{\hspace{4mm}#2 \vspace*{1mm}}{#3}{#4}{}{\hspace{4mm}\textbf{Advisor:} #5}{\hspace{4mm}\textbf{#6:} \textit{#7} }}
+%School City/State, School, Degree, Degree Date, Advisor, title type, title
+
+\newcommand{\bsitem}[4]{\cventry{#1}{\hspace{4mm}#2 \vspace*{1mm}}{#3}{#4}{}{}{}}
+%School City/State, School, Degree, Degree Date
+
+\newcommand{\pubitem}[4]{\item \cvitem{}{\textit{#1}.\\ {#2} \\{\color{color1} \href{#3}{\color{color1} #4}} }\vspace{-0.3cm}} %title, authors, href, journal %\textcolor{red}{$\bullet$} $141$ citations.
+
+\newcommand{\software}[3]{\cventry{}{\bbullet #2}{\hspace{2mm}\texttt{#1}}{}{}{\bbullet \color{color1} \url{#3}}} %Name, Description, URL
+%\vspace{-0.1cm}
+
+\newcommand{\talkitem}[3]{\item \textit{#1}\\{#2}, #3} %Title, Meeting, Date
+\newcommand{\invtalkitem}[3]{\item \textbf{#1}, \hfill{#2} \\ \textit{\color{color1}``#3''} \vspace{-0.1cm}} %Place, Title, Date
+
+%\newcommand{\invtalkitem}[3]{\cvitemwithcomment{}{\item #1 \color{color1}\textit{``#2''}}{#3} \vspace{-0.1cm}}
+\newcommand{\outtalkitem}[4]{\cvitemwithcomment{}{\bbullet #1, #2 \color{color1}\textit{``#3''}}{#4} \vspace{-0.1cm}} %What, Where, Title, Year
+\newcommand{\studentitem}[4]{\item \textit{#1}, {#2} \hfill{#3} \\ \textit{``#4''} } %Name, School, Date, Title\vspace{-0.1cm}
+\newcommand{\confitem}[2]{\item #1 \hfill #2} %Meeting, Date
+
+\newcommand{\blucirc}{{\color{color1} $\circ\;\;$}}
+\newcommand{\bbullet}{\hspace{0.4cm}\blucirc}
+
+%----------------------------------------------------------------------------------------
+%   NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{\huge{Jeffrey~S.}} % Your first name
+\familyname{\huge{Hazboun}} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{\huge{Tenure Curriculum Vitae}}
+\address{Department of Physics, Oregon State University}{313 Weniger Hall Corvallis, OR 97331-6507, USA}
+%\phone[mobile]{+1~(801)~440~2156}
+\phone{+1~(541)~737~1242}
+\email{jeffrey.hazboun@oregonstate.edu}
+\homepage{jeffreyhazboun.github.io}
+\social[github]{Hazboun6}
+\social[twitter]{jeffreyhazboun}
+%\social[linkedin][linkedin.com/in/]{stephen-taylor}
+
+\lhead{{\color{gray} \fontsize{10}{22}\mdseries\upshape{Jeffrey~S.~Hazboun}}}
+\rhead{{\color{gray} \fontsize{10}{10}\mdseries\upshape{jeffrey.hazboun@oregonstate.edu}}}
+
+%\definecolor{color1}{HTML}{1f77b4}
+%\hypersetup{urlcolor=color1,linkcolor=color1}
+
+\begin{document}
+\makecvtitle
+
+\vspace{-13mm}
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\cventry{September 2022--Present}{\hspace{0.4cm}{\blucirc}Assistant Professor of Physics}
+{\textsc{Oregon State University}}
+{Corvallis, OR}{}{} %\vspace{-6mm}
+%
+
+\cventry{August 2018--September 2022}{\hspace{0.4cm}{\blucirc}NANOGrav Physics Frontiers Center Senior Postdoctoral Fellow}
+{\textsc{University of Washington Bothell}}
+{Bothell, WA}{}{} %\vspace{-6mm}
+%
+\cventry{August 2016--July 2018}{\hspace{0.4cm}{\blucirc}NANOGrav Physics Frontiers Center Postdoctoral Fellow}{\textsc{University of Texas Rio Grande Valley}}{Brownsville, TX}{}{} %\vspace{-6mm}
+%
+\cventry{August 2015--July 2016}{\hspace{0.4cm}{\blucirc}Visiting Assistant Professor}{\textsc{Hendrix College}}{Conway, AR}{}{}
+%
+\cventry{September 2014 - August 2015}{\hspace{0.4cm}{\blucirc}Postdoctoral Teaching Position/ Head Online Class Developer}
+{\textsc{Utah State University}}{Logan, UT}{}{}
+%
+\cventry{June 2012 - May 2013}{\hspace{0.4cm}{\blucirc}Visiting Scholar, Center for Relativistic Astrophysics}
+{\textsc{Georgia Institute of Technology}}{Atlanta, GA}{}{}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-3mm}
+\section{Education}
+%School City/State, School, Degree, Degree Date, Advisor, title type, title
+
+\editem{Logan, Utah}{Utah State University}{PhD in Physics}{December 2014}{Dr.~James~T.~Wheeler}{Dissertation Title}{Conformal gravity and time}
+\vspace{2mm}
+
+\editem{Corvallis, Oregon}{Oregon State University}{MS Physics  (Mathematics Minor)}{June 2008}{Dr.~Tevian~Dray}{Thesis Title}{The effects of negative-energy shells on Schwarzschild spacetime}
+\vspace{2mm}
+
+\bsitem{Syracuse, New York}{State University of New York, College of Environmental Science and Forestry}{BS Biology}{December 1999}
+
+%----------------------------------------------------------------------------------------
+%   RESEARCH SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-4mm}
+%\section{Research Interests}
+%\cvitem{Primary interests}{gravitational-wave astronomy~$\bullet$~theoretical astrophysics~$\bullet$~massive black-hole binaries~$\bullet$~stellar-mass compact objects~$\bullet$~pulsar timing~$\bullet$~statistical inference}
+%\cvitem{Secondary interests}{galaxy formation and evolution~$\bullet$~cosmology~$\bullet$~pulsar physics and demographics~$\bullet$~ionized interstellar medium}
+%\cvitem{Specific interests}{Bayesian hierarchical modeling~$\bullet$~pulsar-timing data-analysis for nanohertz gravitational-wave searches~$\bullet$~compact-binary demographics and population inference~$\bullet$~pulsar-timing noise characterization and mitigation~$\bullet$~waveform modeling for supermassive black-hole binary searches~$\bullet$~modeling final-parsec dynamics of supermassive black-hole binaries~$\bullet$~stochastic signal analysis strategies}
+
+%----------------------------------------------------------------------------------------
+%   GRANTS & FUNDING
+%----------------------------------------------------------------------------------------
+
+\section{Grants, Funding \& Awards}
+
+\cvitemwithcomment{}{\textbf{Proposal (PI): ``Pulsar Timing Array GW Signal Analysis Using Big Data Techniques''}}{2019}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}PI Jeffrey Hazboun, a submission to Amazon Web Services Machine Learning Research Awards. \\
+&\hspace{0.4cm} &  {\color{color1} $\circ\;\;$}Total award: $\$50,000$ in AWS Promotional Credits.\\
+\end{tabular} \\
+
+%----------------------------------------------------------------------------------------
+%  OBSERVING PROPOSALS
+%----------------------------------------------------------------------------------------
+%\vspace{-4mm}
+\section{Observing Proposals}
+{\small
+\cvitemwithcomment{}{Co-I: \textbf{``Monitoring pulse-shape changes in the IPTA pulsar sample"}}{May 2021}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Giant Metrewave Radio Telescope, Target of Opportunity proposal  \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $10.0$ hours
+\end{tabular} \\
+
+\cvitemwithcomment{}{Co-I: \textbf{``Tracking Rapid and Unexpected Pulse Shape Changes in the MSP~J1713+0747"}}{May 2021}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Very Large Array, Director's discretionary time proposal VLA/$21A-426$ \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $14.0$ hours
+\end{tabular} \\
+
+\cvitemwithcomment{}{Co-I: \textbf{``Monitoring pulse shape changes in the International Pulsar Timing Array"}}{June 2021}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Parkes Observatory, Non A-priori Assignable Proposal \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $10.0$ hours
+\end{tabular} \\
+
+\cvitemwithcomment{}{Co-I: \textbf{``High Cadence Observations of MSPs for Gravitational Wave Detection"}}{March 2020}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Arecibo Radio Telescope, proposal P$2945$ \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $32.5$ hours
+\end{tabular} \\
+
+\cvitemwithcomment{}{Co-I: \textbf{``High Time Resolution Observations of a Bright Millisecond Pulsar"}}{November 2018}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Greenbank Telescope, Project ID GBT$18B-355$ \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $5$ hours
+\end{tabular}
+}
+
+%\vspace{-10mm}
+%----------------------------------------------------------------------------------------
+%  FULL PUBLICATION LIST
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+%\cvitem{}
+%{
+%\begin{tabular}{rcl}
+%\textbf{Counts}: &\hspace{0.3cm} &{\textbf{44} papers published in major peer-reviewed journals} \\
+%& &{(out of which \textbf{12} are first-authored papers, and \textbf{4} papers were covered by press releases).}
+%\end{tabular}
+%}
+
+%$\bullet$ \textbf{Total number of citations:} 2650 (using Google Scholar), \textbf{h-index:} 27, \textbf{i10-index:} 34
+
+$\bullet$ \textbf{Metrics} available at {\color{color1} \href{https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20J.S.Hazboun.1&ui-citation-summary=true}{InspireHEP} or \href{https://scholar.google.com/citations?user=CbNY_MYAAAAJ&hl=en}{Google Scholar}}.
+
+\subsection{Submitted}
+
+\begin{etaremune}[leftmargin=8mm]
+\input{sub_entries}
+\end{etaremune}
+
+\subsection{Accepted}
+
+\begin{etaremune}[leftmargin=8mm]
+\input{accept_entries}
+\end{etaremune}
+
+\subsection{Published}
+
+\begin{etaremune}[leftmargin=8mm]
+\input{pub_entries}
+\end{etaremune}
+
+\subsection{Technical and White Papers}
+
+\begin{etaremune}[leftmargin=8mm]
+\input{wp_entries}
+\end{etaremune}
+
+%----------------------------------------------------------------------------------------
+%   TEACHING SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-4mm}
+\section{Teaching \& Mentoring}
+
+%\textbf{\textcolor{black}{Lecturing:}}
+\subsection{Teaching Positions}
+	\renewcommand\labelitemi{\blucirc}
+	\begin{itemize}[leftmargin=8mm]
+	\setlength\itemsep{1mm}
+	\item \textbf{\color{color1} Assistant Professor of Physics}, Oregon State University, \hfill Fall 2022 - Present
+        		\newline  \textit{Electromagnetism and General Physics I}
+	\item \textbf{\color{color1} Visiting Assistant Professor}, Hendrix College, \hfill Fall 2015 - Spring 2016
+        		\newline  \textit{Astronomy, Cosmology, Quantum Mechanics, and General Physics I}
+		\newline Mentored 4 undergraduate researchers.
+        \item \textbf{\color{color1} Physics Instructor}, Utah State University, \hfill Spring 2015
+        		\newline \textit{General Physics II:} Physics for the Life Sciences class.
+		\newline Instructor of Record for 165 students.
+		\newline Supervised nine teaching assistants.
+        \item \textbf{\color{color1} Astronomy Instructor}, Utah State University, \hfill Fall 2014
+        		\newline Instructor of record for a 300+ person astronomy class.
+		\newline Supervised two teaching assistants.
+        \item \textbf{\color{color1} Online Physics Course Developer \& Instructor}, Utah State University, \hfill 2012-2014
+        		\newline \textit{The Universe:} Proposed, developed and taught an online cosmology class.
+		\newline Aimed at non-science majors.
+		\newline Continuously offered for the last 7 semesters.
+		\newline Over 2000 students have taken this class.
+        \item \textbf{\color{color1} Physics Instructor}, Utah State University, \hfill Summer 2011
+        		\newline \textbf\emph{General Physics I:} Instructor of Record
+	\item \textbf{\color{color1} MCAT Physics Instructor} Princeton Review, Portland, Oregon, \hfill Summer 2007
+		\newline Developed curriculum to help students review for physics portion of the MCAT exam.
+		\newline Taught students test-taking strategies to prepare for a stressful and fast-paced exam.
+	\end{itemize}
+
+\subsection{Courses}
+
+	\vspace*{1mm}
+
+	\begin{itemize}[leftmargin=8mm]
+        		\item \textbf{\color{color1} Static Vector Fields,} \emph{PH422} (W23)
+		\item \textbf{\color{color1} Honors General Physics w/ Calculus,} \emph{PH213H} (S23)
+		\item \textbf{\color{color1} Astrophysics,} \emph{PH455/PH555} (F23)
+		\item \textbf{\color{color1} Scientific Computing II,} \emph{PH464/PH564} (W23)
+        \end{itemize}
+
+\subsection{Graduate Student Research Mentoring}
+\renewcommand\labelitemi{\blucirc}
+\begin{itemize}[leftmargin=8mm]
+	\studentitem{Kalista Wayt}{Oregon State University}{2023-}{Optimal Cross Correlation Statistics Across PTAs}
+	\studentitem{Alberto Diaz}{Oregon State University}{2022-}{Stochasticity in AGN Light Curves}
+	\studentitem{Jeremy Baier}{Oregon State University}{2022-}{Pulsar Noise and Detector Characterization}
+	\studentitem{Ian Diaz}{Oregon State University}{2022-}{NICER Timing Noise Analysis}
+	\studentitem{Brent Shapiro-Albert}{West Virginia University}{2018-2020}{Chromatic Covariances with the Pulsar Signal Simulator}
+	\studentitem{Andrew Kaiser}{West Virginia University}{2018-2023}{Bayesian Non-Linear Timing with Gravitational Wave PTA Software}
+
+\end{itemize}
+
+
+\subsection{Undergraduate Student Research Mentoring}
+\renewcommand\labelitemi{\blucirc}
+\begin{itemize}[leftmargin=8mm]
+	\studentitem{Kalista Wayt}{University of Washington Bothell}{2022-Present}{IPTA Quick Optimal Statistic}
+	%\studentitem{Kalista Wayt}{University of Washington Bothell}{2022-Present}{IPTA Quick Optimal Statistic}
+	\studentitem{Christine Ye}{University of Washington Bothell}{2020-2022}{PTA False Alarm Studies}
+	\studentitem{Min Young Kim}{University of Washington Seattle}{2018-2019}{Bayesian Pulsar Timing}
+	\studentitem{Kyle Gersbach}{University of Washington Bothell}{2018-2020}{Teaching with the Pulsar Signal Simulator}
+	\studentitem{Jacob Hesse}{University of Washington Bothell}{2017-2018}{Efficiently Simulating NANOGrav Pulsars}
+	\studentitem{Amelia Henkel}{REU UT Rio Grande Valley}{Summer 2017}{Dispersing Simulated Baseband Pulsar Signals}
+	\studentitem{Cassidy Wagner}{REU UT Rio Grande Valley}{Summer 2017}{Simulating Interstellar Medium Effects with Convolution}
+       	 \studentitem{Chris Griffin}{Hendrix College}{2015-2016}{Conformal Diagrams of Crossing Spherical Shells in Schwarzschild Spacetime}
+      	\studentitem{Devon Roell}{Hendrix College}{2015-2016}{The Quantum Exchange Force and Gravity}
+	\studentitem{Eric Mullins}{Hendrix College}{2015-2016}{Localizing Gravitational Wave Sources with Noisy Null Signals}
+	\studentitem{Connor Nelson}{Hendrix College}{2015-2016}{Localizing Multiple Gravitational Wave Sources with Null Signals}
+        	\studentitem{Manuel Pichardo Marcano}{Utah State University}{2012-2013}{Multi-messenger Pulsar Timing Array Sources and Propagation Tests}
+\end{itemize}
+
+%\textbf{\textcolor{black}{Teaching assistant:}}
+%\subsection{Teaching assistant}
+
+%\begin{itemize}[leftmargin=8mm]
+%	\item Utah State University \hfill Fall 2009-Spring 2012
+%            	\newline \textit{General Physics I:} Recitation Leader and Lab Instructor
+%            	\newline \textit{General Physics II:} Recitation Leader and Lab Instructor
+%       	 \item Oregon State University  \hfill Fall 2006-Spring 2009
+%            	\newline \textit{Paradigms in Physics TA:} NSF funded higher division class reform project.
+%		\newline Facilitated group work and took part in curriculum meetings.
+%           	\newline \textit{Physics for the Life Sciences:} Recitation Leader and Lab Instructor
+%            	\newline \textit{General Physics II:} Lab Instructor
+%\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%   SERVICE SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-4mm}
+\section{Service}
+\subsection{Calendar Year 2022}
+\begin{itemize}[leftmargin=8mm]
+\confitem{Diversity, Inclusion, Culture \& Equity Committee (Physics Department)}{Member}
+\confitem{Upper Division Curriculum Committee (Physics Department)}{Member}
+\confitem{Graduate Curriculum Committee (Physics Department)}{Member}
+\confitem{Graduate Admissions Committee (Physics Department)}{Member}
+\end{itemize}
+\subsection{Calendar Year 2023}
+\begin{itemize}[leftmargin=8mm]
+\confitem{Subcommittee on Common Spaces for Heat Plant (Physics Department)}{Chair}
+\confitem{Diversity, Inclusion, Culture \& Equity Committee (Physics Department)}{Member}
+\confitem{Graduate Admissions Committee (Physics Department)}{Member}
+\confitem{Diversity, Inclusion, Culture \& Equity Committee  (Physics Department)}{Chair}
+\confitem{Astronomy Search (Spring 2023) (Physics Department)}{Member}
+\confitem{Upper Division Curriculum Committee (Physics Department)}{Member}
+\confitem{Graduate Curriculum Committee (Physics Department)}{Member}
+\confitem{NANOGrav Astrophysics Search (Physics Department)}{Member}
+\end{itemize}
+\subsection{Calendar Year 2024}
+\begin{itemize}[leftmargin=8mm]
+\confitem{Diversity, Inclusion, Culture \& Equity Committee, Chair (Physics Department)}{Chair}
+\confitem{Subcommittee on Common Spaces for Heat Plant, Chair (Physics Department)}{Chair}
+\confitem{Upper Division Curriculum Committee (Physics Department)}{Member}
+\confitem{Graduate Curriculum Committee (Physics Department)}{Member}
+\confitem{NANOGrav Astrophysics Search (Physics Department)}{Member}
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%   OUTREACH SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-2mm}
+\section{Leadership \& Professional Service}
+
+\subsection{Research leadership}
+
+\cvitemwithcomment{}{\hspace{0.15cm}${\color{color1} \circ}\;$ \textit{\textbf{Lead}}, NANOGrav 15-year Detector Characterization}{Mar 2021--Present} \vspace{-0.1cm}
+
+\cvitemwithcomment{}{\hspace{0.15cm}${\color{color1} \circ}\;$ \textit{\textbf{Co-chair}}, IPTA Gravitational Wave Analysis Group}{Jan 2019--Dec 2021} \vspace{-0.1cm}
+
+\cvitemwithcomment{}{\hspace{0.15cm}${\color{color1} \circ}\;$ \textit{\textbf{Co-chair}}, IGRAV Diversity, Equity \& Inclusion Working Group}{Jan 2019--July 2021} \vspace{-0.1cm}
+
+\cvitemwithcomment{}{\hspace{0.15cm}${\color{color1} \circ}\;$ \textit{\textbf{Co-chair}}, IPTA Data Challenge Group}{Mar 2018--Jan 2022} \vspace{-0.1cm}
+
+\subsection{Reviewer for international journals}
+\hspace{0.5mm} \blucirc The Astrophysical Journal  \hfill \blucirc Classical and Quantum Gravity \hfill \hspace{-0.2cm} \blucirc Physical Review D
+
+\hspace{0.5mm} \blucirc General Relativity \& Gravitation  \hfill \blucirc Monthly Notices of the Royal Astronomical Society
+
+\hspace{0.5mm} \blucirc Physical Review Letters  \hfill \blucirc European Journal of Physics
+
+%\vspace{-5mm}
+
+\subsection{Conference organization}
+	\begin{itemize}[leftmargin=8mm]
+	\confitem{Local Organizing Committee, NANOGrav Spring Meeting, Oregon State University}{2023}
+	\confitem{Local Organizing Committee, Conferences for Undergraduate Women in Physics, UW Seattle}{2019}
+	\confitem{Local Organizing Committee Chair, NANOGrav Spring Meeting, UW Bothell}{2019}
+	\confitem{LISA Data Analysis Workshop, AAS233}{2019}
+	\confitem{Scientific Organizing Committee, LISA Symposium, Chicago}{2018}
+	\confitem{Scientific Organizing Committee, NANOGrav Spring Meeting, University of Virginia}{2018}
+	\confitem{Scientific Organizing Committee, NANOGrav Spring Student Workshop, University of Virginia}{2018}
+    	\confitem{Student Workshop Organizer, IPTA Meeting, Paris, France}{2017}
+	\confitem{Session Chair, \emph{Black Holes}, AAS235}{2020}
+	\confitem{Session Chair, LISA Symposium}{2018}
+	\end{itemize}
+
+%\subsection{Seminar organization}
+%\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ Caltech TAPIR Seminar Series \textit{(executive committee)}}{2019} \vspace{-0.1cm}
+%\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ Caltech/JPL Association for Gravitational-Wave Research \textit{(executive committee)}}{2017--2019} \vspace{-0.1cm}
+%\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ Caltech TAPIR and LIGO postdoctoral lunch seminar series}{2015--2016} \vspace{-0.1cm}
+\begin{comment}
+\subsection{Committees}
+\cvitemwithcomment{}{\hspace{2mm}${\color{color1} \circ}\;$ NANOGrav chapter of the {\color{color1} \href{https://www.aps.org/programs/innovation/fund/idea.cfm}{APS Inclusion, Diversity, \& Equity Alliance}}}{Jul 2020--} \vspace{-0.1cm}
+\end{comment}
+
+\subsection{Code \& data sharing}
+
+\cvitemwithcomment{}{\hspace{2mm}${\color{color1} \circ}\;$ Jupyter Notebook examples for \texttt{pta\_forecasts}. Based on \url{arxiv.org/abs/2009.11865}}{2020} \vspace{-0.1cm}
+\hspace{0.71cm} {\color{color1} \url{https://github.com/Hazboun6/pta_forecasts}}
+
+\cvitemwithcomment{}{\hspace{2mm}${\color{color1} \circ}\;$ Introductory data analysis tutorial.}{2019} \vspace{-0.1cm}
+\hspace{0.71cm} {\color{color1} \url{https://github.com/Hazboun6/data_analysis_tutorial}}
+
+\cvitemwithcomment{}{\hspace{2mm}${\color{color1} \circ}\;$ Developer of open-source Python GW analysis software \texttt{enterprise}}{2017--} \vspace{-0.1cm}
+\hspace{0.71cm} {\color{color1} \url{https://github.com/nanograv/enterprise}}
+
+
+%\vspace{-3mm}
+\section{Media Engagement, Outreach \& Diversity}
+
+%\begin{comment}
+\subsection{Media Coverage \& Engagement}
+
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://physics.oregonstate.edu/impact/2024/02/nsf-career-award-helps-physicist-unravel-the-mysteries-of-the-universe}{``\textit{NSF Career Award helps physicist unravel the mysteries of the universe}''}}}{Feb 2023} \vspace{-0.1cm}
+\hspace{0.71cm} OSU College of Science  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.youtube.com/watch?v=U65mWdH3nV0}{``\textit{Physicist Answers Physics Questions From Twitter | Tech Support | WIRED}''}}}{Nov 2023} \vspace{-0.1cm}
+\hspace{0.71cm} WIRED Magazine  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.npr.org/transcripts/1183878163}{``\textit{Scientists have found signs of a new kind of gravitational wave. It's really big}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} National Public Radio, Morning Edition  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.pbs.org/newshour/show/gravitational-wave-discovery-leads-to-greater-understanding-of-the-fabric-of-our-universe}{``\textit{Gravitational wave discovery leads to greater understanding of the fabric of our universe}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} PBS News Hour \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.reuters.com/science/scientists-discover-that-universe-is-awash-gravitational-waves-2023-06-29/}{``\textit{Scientists discover that universe is awash in gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} Reuters Wire Service  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.geekwire.com/2023/evidence-hum-gravitational-waves/}{``\textit{Astrophysicists report solid evidence for a background hum of gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} GeekWire  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://today.oregonstate.edu/news/astrophysics-collaboration-led-oregon-state-finds-chorus-gravitational-waves}{``\textit{Astrophysics collaboration led by Oregon State finds 'chorus' of gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} OSU press release  \\
+
+%\end{comment}
+
+\subsection{Outreach}
+\renewcommand\labelenumi{\bfseries\theenumi .}
+\small
+\outtalkitem{Science Pub}{}{ The Search for Lumbering Giants: Listening to the whispers of Behemoth Black Holes}{2024}
+\outtalkitem{North City Tech Meetup}{}{Searching for Gravitational Waves with a Galactic-Scale Detector}{2021}
+\outtalkitem{Gravitational Wave Astronomy}{Eastside Preparatory}{How are gravitational waves detected?}{2020}
+\outtalkitem{Science Wednesday Panel Discussion}{King's Live Music}{The Science of Time Travel}{2015}
+\outtalkitem{Science Fiction Club Talk}{Hendrix College}{Black Holes and Wormholes}{2015}
+\outtalkitem{Science Unwrapped (500 person public lecture)}{Utah State University}{Explore to Conserve}{2013}
+\outtalkitem{Conservation Club Talk}{Weber State}{A Scientist's Role in Conservation}{2012}
+\outtalkitem{Science Unwrapped}{Swaner Ecocenter}{A Scientist's Role in Modern Exploration}{2012}
+\outtalkitem{Cache Valley Stargazers Talk}{Logan, UT}{Black Holes: Ninjas of the Night Sky}{2009}
+
+\subsection{Diversity \& Equity}
+\begin{itemize}[leftmargin=8mm]
+\item Member, Diversity, Inclusion, Culture \& Equity Committee, Oregon State Physics Department, Sept 2022 --
+\item Founding Co-chair, Diversity Equity \& Inclusion Working Group,  {\color{color1} \href{https://indico.ego-gw.it/event/29/sessions/53/attachments/420/685/International_Gravitational-Wave_Outreach_Group_Meeting__Briefing_Document.pdf}{International Gravitational Outreach Group}}, Jul 2018--Sep 2021
+\item Member of the NANOGrav chapter of the {\color{color1} \href{https://www.aps.org/programs/innovation/fund/idea.cfm}{APS Inclusion, Diversity, \& Equity Alliance}}, Jul 2020--Sep 2022
+\item Local Organizing Committee, UW, Seattle (2019) {\color{color1} \href{https://www.aps.org/programs/women/cuwip/cuwiphistory.cfm}{Conferences for Undergraduate Women in Physics}}
+%\item As an LOC member for the Spring 2018 NANOGrav collaboration meeting at UW Bothell, I coordinated with the Bothell Center for Diversity on a seminar to promote allyship, inclusiveness, and equity within the NANOGrav collaboration.
+\end{itemize}
+
+\subsection{Professional affiliations}
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ LISA Consortium, \textit{Member}}{} \vspace{-0.1cm}
+
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ North American Nanohertz Observatory for Gravitational-waves (NANOGrav), \textit{Full member}}{} \vspace{-0.1cm}
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ International Pulsar Timing Array (IPTA), \textit{Member}}{} \vspace{-0.1cm}
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ American Physical Society (DGRAV), \textit{Member}}{} \vspace{-0.1cm}
+%\vspace{-0.1cm}
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ American Astronomical Society, \textit{Member}}{} \vspace{-0.1cm}
+
+\section{Software Development}
+\subsection{Lead Developer}
+\software{Hasasia}{Python package for calculating pulsar timing array sensitivity curves and signal-to-noise ratios.}{https://pypi.org/project/hasasia/}
+\software{Pulsar Signal Simulator}{Python package for simulating pulsar observation data.}{https://github.com/PsrSigSim/PsrSigSim}
+\software{La Forge}{Python package for processing data from Bayesian analyses of PTA data.}{https://pypi.org/project/la-forge/}
+\software{Pulsar Data Toolbox}{Python package for accessing pulsar data files.}{https://pypi.org/project/pdat/}
+
+\subsection{Development Team}
+\software{Enterprise}{Python package for bayesian PTA data analysis.}{https://github.com/nanograv/enterprise}
+\software{enterprise\underline{ }extensions}{Python package for building bayesian analysis models.}
+{https://github.com/nanograv/enterprise_extensions}
+\software{gwent}{Python package calculating gravitational wave sensitivities across the spectrum}{https://pypi.org/project/gwent/}
+\software{Tabletop PTA}{Python package for an acoustical PTA demonstration.}{https://pypi.org/project/tabletop_pta/}
+%\vspace{-0.1cm}
+
+%----------------------------------------------------------------------------------------
+%  FULL PRESENTATIONS
+%----------------------------------------------------------------------------------------
+%\pagebreak
+\section{Full Presentation List}
+%\vspace{-0.3cm}
+\input{presentations}
+
+\begin{comment}
+\newpage
+\section{References}
+
+
+	\renewcommand\labelitemi{\blucirc}
+	\begin{itemize}[leftmargin=8mm]
+	\setlength\itemsep{0.05mm}
+	\item \textbf{Dr. Xavier Siemens} \emph{NANOGrav PI/ Collaborator}
+        		\newline Professor of Physics
+		\newline Oregon State University, Corvallis, OR 97331
+		\newline \emph{Phone:} 541-737-7512 \qquad \emph{email:} \url{xavier.siemens@oregonstate.edu}
+		\newline
+	\item \textbf{Dr. Stephen Taylor} \emph{NANOGrav Detection Working Group Co-chair/ Collaborator}
+       		\newline Professor of Physics
+		\newline Vanderbilt University, Nashville, TN 37235
+		\newline \emph{Phone:} 615-322-7311 \qquad email:\url{stephen.r.taylor@vanderbilt.edu}
+		\newline
+	\item \textbf{Dr. Joey Key} \emph{Post Doctoral Advisor}
+       		\newline Professor of Physics
+		\newline University of Washington Bothell, Bothell, WA 98011
+		\newline \emph{Phone:} 425-352-5497 \qquad email:\url{joeykey@uw.edu}
+		\newline
+	\item \textbf{Dr. Joseph Romano} %\emph{Post Doctoral Advisor}
+       		\newline Professor of Physics
+		\newline Texas Tech University, Lubbock, TX 79409
+		\newline \emph{Phone:} 806-834-6522 \qquad email:\url{joseph.d.romano@ttu.edu}
+		\newline
+	\item \textbf{Dr. James T. Wheeler} \emph{PhD Advisor, Utah State University}
+        		\newline Associate Professor of Physics
+		\newline Utah State University, Logan, UT 84321
+		\newline \emph{Phone:} 435-770-7601 \qquad email:\url{jim.wheeler@usu.edu}
+		\newline
+	\item \textbf{Dr. Tevian Dray} \emph{MS Advisor, Oregon State University}
+     		\newline Professor of Mathematics
+		\newline Oregon State University, Corvallis, OR 97331
+		\newline \emph{Phone:} 	541-737-5159 \qquad \emph{email:} \url{tevian@math.oregonstate.edu}
+		\newline
+	\item \textbf{Dr. Jan Sojka}
+        		\newline Department Chair \& Professor of Physics
+		\newline Utah State University, Logan, UT 84321
+		\newline \emph{Phone:} 435-797-2857 \qquad email: \url{jan.sojka@usu.edu}
+		\newline
+
+	\item \textbf{Dr. Damon T. Spayde} %\emph{Teaching Reference}
+       		\newline Department Chair \& Associate Professor of Physics
+		\newline Hendrix College, Conway, AR 72032
+		\newline \emph{Phone:} 501-450-1251 \qquad email:\url{spayde@hendrix.edu}
+		\newline
+	\item \textbf{Dr. Shane Larson} \emph{Collaborator}
+        		\newline Research Associate Professor
+		\newline Center for Interdisciplinary Exploration and Research in Astrophysics (CIERA)
+		\newline Northwestern University, Evanston, IL 60208
+		\newline \emph{Phone:} 847-467-4305 \qquad \emph{email:}\url{s.larson@northwestern.edu}
+		\newline
+	\item \textbf{Dr. Todd Tinsley} %\emph{Teaching Reference}
+       		\newline Associate Professor of Physics
+		\newline Hendrix College, Conway, AR 72032
+		\newline \emph{Phone:} 501-450-1404 \qquad email:\url{tinsley@hendrix.edu}
+		\newline
+
+	\end{itemize}
+%\subsection{Teaching}
+\end{comment}
+
+\end{document}

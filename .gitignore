@@ -27,9 +27,11 @@
 *Notes.bib
 _minted*
 *converted-to.pdf
+*.fdb_latexmk
 
 #### Actual paper
 hazboun_cv.pdf
+hazboun_tenure.pdf
 hazboun_cv_short.pdf
 hazboun_publist.pdf
 hazboun_reflist.pdf

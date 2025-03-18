@@ -1,0 +1,216 @@
+\documentclass[11pt,letterpaper,sans,unicode]{moderncv}
+\usepackage{xpatch}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{textcomp}
+\usepackage{units}
+\usepackage{lineno}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage[gen]{eurosym}
+\usepackage{comment}
+\usepackage{etaremune}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+%\usepackage[latin9]{inputenc}
+
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=0.7in,bottom=0.7in,left=1in,right=1in,bindingoffset=0cm]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\usepackage{lastpage}
+\usepackage{mathabx}
+\cfoot{{\color{gray} Page \thepage\ of \pageref{LastPage}}}
+
+\def\baas{{Bulletin of AAS}}               % Bulletin of the AAS
+\def\prd{{Phys. Rev.} D}
+\def\prl{{Phys.Rev.} Lett}
+\def\ajp{{Amer. J. Phys}}
+\def\apjl{{Astrophys. J.} Lett}
+\def\apjs{{Astrophys. J.} Supp}
+\def\apj{{Astrophys. J.}}
+\def\cqg{{Class. Quantum Grav.}}
+\def\aaps{{A\&AS}}
+\def\pasj{{PASJ}}
+\def\mnras{{MNRAS}}
+\def\aapr{{A\&ARv}}
+\def\aap{{A\&A}}
+\def\grg{{Gen. Rel.\&Grav.}}
+\def\na{{New Astronomy}}
+\def\ptp{{Progress of Theoretical Physics}}
+\def\araa{{ARA\&A}}
+\def\ssr{{Space Sci. Rev.}}
+\def\jpcs{{J. Phys. Conf. Ser.}}
+\def\npb{{Nucl. Phys. B}}
+\def\clrpaawp{{Can. Lon. Ran. Plan A\&A}}
+
+
+\newcommand{\cvreference}[9]{%
+  \textbf{#1}\newline% Name
+  \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+  \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+  \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+  \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+  \ifthenelse{\equal{#6}{}}{}{#6\newline}%
+  \ifthenelse{\equal{#7}{}}{}{#7\newline}%
+  \ifthenelse{\equal{#8}{}}{}{\emailsymbol~{\footnotesize \texttt{\emaillink[]{#8}}}\newline}
+  \ifthenelse{\equal{#9}{}}{}{\phonesymbol~#9}
+  }
+
+
+%%%%%% My Macros %%%%%
+\newcommand{\editem}[7]{\cventry{#1}{\hspace{4mm}#2 \vspace*{1mm}}{#3}{#4}{}{\hspace{4mm}\textbf{Advisor:} #5}{\hspace{4mm}\textbf{#6:} \textit{#7} }}
+%School City/State, School, Degree, Degree Date, Advisor, title type, title
+
+\newcommand{\bsitem}[4]{\cventry{#1}{\hspace{4mm}#2 \vspace*{1mm}}{#3}{#4}{}{}{}}
+%School City/State, School, Degree, Degree Date
+
+\newcommand{\pubitem}[4]{\item \cvitem{}{\textit{#1}.\\ {#2} \\{\color{color1} \href{#3}{\color{color1} #4}} }\vspace{-0.3cm}} %title, authors, href, journal %\textcolor{red}{$\bullet$} $141$ citations.
+
+\newcommand{\software}[3]{\cventry{}{\bbullet #2}{\hspace{2mm}\texttt{#1}}{}{}{\bbullet \color{color1} \url{#3}}} %Name, Description, URL
+%\vspace{-0.1cm}
+
+\newcommand{\talkitem}[3]{\item \textit{#1}\\{#2}, #3} %Title, Meeting, Date
+\newcommand{\invtalkitem}[3]{\item \textbf{#1}, \hfill{#2} \\ \textit{\color{color1}``#3''} \vspace{-0.1cm}} %Place, Title, Date
+
+%\newcommand{\invtalkitem}[3]{\cvitemwithcomment{}{\item #1 \color{color1}\textit{``#2''}}{#3} \vspace{-0.1cm}}
+\newcommand{\outtalkitem}[4]{\cvitemwithcomment{}{\bbullet #1, #2 \color{color1}\textit{``#3''}}{#4} \vspace{-0.1cm}} %What, Where, Title, Year
+\newcommand{\studentitem}[4]{\item \textit{#1}, {#2} \hfill{#3} \\ \textit{``#4''} } %Name, School, Date, Title\vspace{-0.1cm}
+\newcommand{\confitem}[2]{\item #1 \hfill #2} %Meeting, Date
+
+\newcommand{\blucirc}{{\color{color1} $\circ\;\;$}}
+\newcommand{\bbullet}{\hspace{0.4cm}\blucirc}
+
+\input{contact}
+%\definecolor{color1}{HTML}{1f77b4}
+%\hypersetup{urlcolor=color1,linkcolor=color1}
+\title{Biosketch}
+\begin{document}
+\makecvtitle
+
+\vspace{-13mm}
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\cventry{September 2022--Present}{\hspace{0.4cm}{\blucirc}Assistant Professor of Physics}
+{\textsc{Oregon State University}}
+{Corvallis, OR}{}{} %\vspace{-6mm}
+%
+
+\cventry{August 2018--September 2022}{\hspace{0.4cm}{\blucirc}NANOGrav Physics Frontiers Center Senior Postdoctoral Fellow}
+{\textsc{University of Washington Bothell}}
+{Bothell, WA}{}{} %\vspace{-6mm}
+%
+\cventry{August 2016--July 2018}{\hspace{0.4cm}{\blucirc}NANOGrav Physics Frontiers Center Postdoctoral Fellow}{\textsc{University of Texas Rio Grande Valley}}{Brownsville, TX}{}{} %\vspace{-6mm}
+%
+\cventry{August 2015--July 2016}{\hspace{0.4cm}{\blucirc}Visiting Assistant Professor}{\textsc{Hendrix College}}{Conway, AR}{}{}
+%
+\cventry{September 2014 - August 2015}{\hspace{0.4cm}{\blucirc}Postdoctoral Teaching Position/ Head Online Class Developer}
+{\textsc{Utah State University}}{Logan, UT}{}{}
+%
+\cventry{June 2012 - May 2013}{\hspace{0.4cm}{\blucirc}Visiting Scholar, Center for Relativistic Astrophysics}
+{\textsc{Georgia Institute of Technology}}{Atlanta, GA}{}{}
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+%\vspace{-3mm}
+\section{Education}
+%School City/State, School, Degree, Degree Date, Advisor, title type, title
+
+\editem{Logan, Utah}{Utah State University}{PhD in Physics}{December 2014}{Dr.~James~T.~Wheeler}{Dissertation Title}{Conformal gravity and time}
+\vspace{2mm}
+
+\editem{Corvallis, Oregon}{Oregon State University}{MS Physics  (Mathematics Minor)}{June 2008}{Dr.~Tevian~Dray}{Thesis Title}{The effects of negative-energy shells on Schwarzschild spacetime}
+\vspace{2mm}
+
+\bsitem{Syracuse, New York}{State University of New York, College of Environmental Science and Forestry}{BS Biology}{December 1999}
+
+%----------------------------------------------------------------------------------------
+%   GRANTS & FUNDING
+%----------------------------------------------------------------------------------------
+
+\section{Grants \& Funding}
+\input{grants}
+
+\section{Awards}
+\input{awards}
+
+%\vspace{-3mm}
+\section{Media Engagement, Outreach \& Diversity}
+
+%\begin{comment}
+\subsection{Media Coverage \& Engagement}
+
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://physics.oregonstate.edu/impact/2024/02/nsf-career-award-helps-physicist-unravel-the-mysteries-of-the-universe}{``\textit{NSF Career Award helps physicist unravel the mysteries of the universe}''}}}{Feb 2023} \vspace{-0.1cm}
+\hspace{0.71cm} OSU College of Science  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.youtube.com/watch?v=U65mWdH3nV0}{``\textit{Physicist Answers Physics Questions From Twitter | Tech Support | WIRED}''}}}{Nov 2023} \vspace{-0.1cm}
+\hspace{0.71cm} WIRED Magazine  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.npr.org/transcripts/1183878163}{``\textit{Scientists have found signs of a new kind of gravitational wave. It's really big}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} National Public Radio, Morning Edition  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.pbs.org/newshour/show/gravitational-wave-discovery-leads-to-greater-understanding-of-the-fabric-of-our-universe}{``\textit{Gravitational wave discovery leads to greater understanding of the fabric of our universe}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} PBS News Hour \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.reuters.com/science/scientists-discover-that-universe-is-awash-gravitational-waves-2023-06-29/}{``\textit{Scientists discover that universe is awash in gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} Reuters Wire Service  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://www.geekwire.com/2023/evidence-hum-gravitational-waves/}{``\textit{Astrophysicists report solid evidence for a background hum of gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} GeekWire  \\
+%
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://today.oregonstate.edu/news/astrophysics-collaboration-led-oregon-state-finds-chorus-gravitational-waves}{``\textit{Astrophysics collaboration led by Oregon State finds 'chorus' of gravitational waves}''}}}{June 2023} \vspace{-0.1cm}
+\hspace{0.71cm} OSU press release  \\
+
+%\end{comment}
+\subsection{Outreach Projects}
+\cvitemwithcomment{}{\hspace{0.4cm}${\color{color1} \circ}\;$ {\color{color1} \href{https://astronomyontap.org/locations/corvallis-or/}{\textit{Astronomy on Tap Corvallis Lecture Series}}}}{Fall 2023 -- Present} \vspace{-0.1cm}
+\hspace{0.71cm} Bombs Away Cafe, First Tuesday of the Month  \\
+\hbox{\hspace{0.71cm} 300+ Attendees and counting}
+
+\subsection{Outreach Talks}
+\renewcommand\labelenumi{\bfseries\theenumi .}
+\small
+\outtalkitem{Astronomy on Tap Speaker}{}{Black Holes}{2024}
+\outtalkitem{Academy for Lifelong Learning}{}{Whispers of Behemoth Black Holes}{2024}
+\outtalkitem{Science Pub}{}{ The Search for Lumbering Giants: Whispers of Behemoth Black Holes}{2024}
+\outtalkitem{North City Tech Meetup}{}{Searching for Gravitational Waves with a Galactic-Scale Detector}{2021}
+\outtalkitem{Gravitational Wave Astronomy}{Eastside Preparatory}{How are gravitational waves detected?}{2020}
+%\outtalkitem{Science Wednesday Panel Discussion}{King's Live Music}{The Science of Time Travel}{2015}
+%\outtalkitem{Science Fiction Club Talk}{Hendrix College}{Black Holes and Wormholes}{2015}
+%\outtalkitem{Science Unwrapped (500 person public lecture)}{Utah State University}{Explore to Conserve}{2013}
+%\outtalkitem{Conservation Club Talk}{Weber State}{A Scientist's Role in Conservation}{2012}
+%\outtalkitem{Science Unwrapped}{Swaner Ecocenter}{A Scientist's Role in Modern Exploration}{2012}
+%\outtalkitem{Cache Valley Stargazers Talk}{Logan, UT}{Black Holes: Ninjas of the Night Sky}{2009}
+
+\subsection{Diversity \& Equity}
+\begin{itemize}[leftmargin=8mm]
+\item Member, College of Science Equity, Access and Inclusion Leadership Council, 2023 -- Present
+\item Appointee, NANOGrav Equity and Climate Committee, 2023 -- Present
+\item Member APS Climate Site Visit Committee, 2024
+\item Chair/Member, Diversity, Inclusion, Culture \& Equity Committee, OSU Physics Depart, 2022 -- 2024
+
+\item Founding Co-chair, DEI Working Group,  {\color{color1} \href{https://indico.ego-gw.it/event/29/sessions/53/attachments/420/685/International_Gravitational-Wave_Outreach_Group_Meeting__Briefing_Document.pdf}{International Gravitational Outreach Group}}, 2018-- 2021
+\item Member of the NANOGrav chapter of the {\color{color1} \href{https://www.aps.org/programs/innovation/fund/idea.cfm}{APS Inclusion, Diversity, \& Equity Alliance}}, 2020-- 2022
+\item Local Organizing Committee, UW, Seattle (2019) {\color{color1} \href{https://www.aps.org/programs/women/cuwip/cuwiphistory.cfm}{Conferences for Undergraduate Women in Physics}}
+%\item As an LOC member for the Spring 2018 NANOGrav collaboration meeting at UW Bothell, I coordinated with the Bothell Center for Diversity on a seminar to promote allyship, inclusiveness, and equity within the NANOGrav collaboration.
+\end{itemize}
+
+
+\end{document}

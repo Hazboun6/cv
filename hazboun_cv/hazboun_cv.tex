@@ -94,27 +94,7 @@
 \newcommand{\blucirc}{{\color{color1} $\circ\;\;$}}
 \newcommand{\bbullet}{\hspace{0.4cm}\blucirc}
 
-%----------------------------------------------------------------------------------------
-%   NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-
-\firstname{\huge{Jeffrey~S.}} % Your first name
-\familyname{\huge{Hazboun}} % Your last name
-
-% All information in this block is optional, comment out any lines you don't need
-\title{\huge{Curriculum Vitae}}
-\address{Department of Physics, Oregon State University}{313 Weniger Hall Corvallis, OR 97331-6507, USA}
-%\phone[mobile]{+1~(801)~440~2156}
-\phone{+1~(541)~737~1242}
-\email{jeffrey.hazboun@oregonstate.edu}
-\homepage{jeffreyhazboun.github.io}
-\social[github]{Hazboun6}
-\social[twitter]{jeffreyhazboun}
-%\social[linkedin][linkedin.com/in/]{stephen-taylor}
-
-\lhead{{\color{gray} \fontsize{10}{22}\mdseries\upshape{Jeffrey~S.~Hazboun}}}
-\rhead{{\color{gray} \fontsize{10}{10}\mdseries\upshape{hazboun@uw.edu}}}
-
+\input{contact}
 %\definecolor{color1}{HTML}{1f77b4}
 %\hypersetup{urlcolor=color1,linkcolor=color1}
 
@@ -178,18 +158,19 @@
 \input{grants}
 
 \section{Awards}
-\cvitemwithcomment{}{\textbf{2024 ICBS Frontiers of Science Award in Theoretical Physics}}{2024}
-\begin{tabular}{rcl}
-&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}\emph{Awarded by:} The International Congress of Basic Science \\
-&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}\emph{Awarded for:} ``Reporting first evidence for the existence of a gravitational wave\\
-&\hspace{0.4cm} & \hspace{2.7cm} background from merging supermassive black holes''\\
-\end{tabular} \\
+\input{awards}
 %----------------------------------------------------------------------------------------
 %  OBSERVING PROPOSALS
 %----------------------------------------------------------------------------------------
 %\vspace{-4mm}
 \section{Observing Proposals}
 {\small
+\cvitemwithcomment{}{Co-I: \textbf{``The North American Nanohertz Observatory for Gravitational Waves"}}{May 2024}
+\begin{tabular}{rcl}
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Greenbank Telescope, Project ID \textsc{GBT24B--427} \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $\mathbf{1723.50}$ hours
+\end{tabular}\\
+
 \cvitemwithcomment{}{Co-I: \textbf{``Monitoring pulse-shape changes in the IPTA pulsar sample"}}{May 2021}
 \begin{tabular}{rcl}
 &\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Giant Metrewave Radio Telescope, Target of Opportunity proposal  \\
@@ -198,7 +179,7 @@
 
 \cvitemwithcomment{}{Co-I: \textbf{``Tracking Rapid and Unexpected Pulse Shape Changes in the MSP~J1713+0747"}}{May 2021}
 \begin{tabular}{rcl}
-&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Very Large Array, Director's discretionary time proposal VLA/$21A-426$ \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Very Large Array, Director's discretionary time proposal VLA/\textsc{21A--426} \\
 &\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $14.0$ hours
 \end{tabular} \\
 
@@ -216,7 +197,7 @@
 
 \cvitemwithcomment{}{Co-I: \textbf{``High Time Resolution Observations of a Bright Millisecond Pulsar"}}{November 2018}
 \begin{tabular}{rcl}
-&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Greenbank Telescope, Project ID GBT$18B-355$ \\
+&\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Greenbank Telescope, Project ID \textsc{GBT18B--355} \\
 &\hspace{0.4cm} &{\color{color1} $\circ\;\;$}Status: awarded $5$ hours
 \end{tabular}
 }
@@ -238,7 +219,7 @@
 
 %$\bullet$ \textbf{Total number of citations:} 2650 (using Google Scholar), \textbf{h-index:} 27, \textbf{i10-index:} 34
 
-$\bullet$ \textbf{Metrics} available at {\color{color1} \href{https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20J.S.Hazboun.1&ui-citation-summary=true}{InspireHEP} or \href{https://scholar.google.com/citations?user=CbNY_MYAAAAJ&hl=en}{Google Scholar}}.
+$\bullet$ \textbf{Metrics} available at {\color{color1} \href{https://inspirehep.net/authors/1272186?ui-citation-summary=true}{InspireHEP} or \href{https://scholar.google.com/citations?user=CbNY_MYAAAAJ&hl=en}{Google Scholar}}.
 
 \subsection{Submitted}
 
@@ -529,10 +510,29 @@ $\bullet$ \textbf{Metrics} available at {\color{color1} \href{https://inspirehep
 %----------------------------------------------------------------------------------------
 %\pagebreak
 \section{Full Presentation List}
-%\vspace{-0.3cm}
-\input{presentations}
-%\vspace{-0.6cm}
+\subsection{Invited talks} %\vspace{-0.6cm}
+\renewcommand\labelenumi{\bfseries\theenumi .}
 
+\begin{etaremune}[leftmargin=8mm]
+\small
+%\vspace{-0.3cm}
+\input{invited_presentations}
+%\vspace{-0.6cm}
+\end{etaremune}
+%\vspace{-0.6cm}
+\subsection{Contributed presentations} %\vspace{-0.6cm}
+
+\renewcommand\labelenumi{\bfseries\theenumi .}
+\begin{etaremune}[leftmargin=8mm]
+\small
+\input{contributed_presentations}
+\end{etaremune}
+
+\subsection{Posters}
+\begin{etaremune}[leftmargin=8mm]
+\small
+\input{posters}
+\end{etaremune}
 
 \begin{comment}
 \newpage
